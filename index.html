@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/global.css"/>
   <link rel="stylesheet" href="./css/style.css"/>
+  <link rel="stylesheet" href="./css/checkbox.css"/>
 </head>
 <body>
   <header>
@@ -23,16 +24,26 @@
       <button id="add-task"><span>Cadastrar</span></button>
     </section>
     <section class="task-count">
-      <div class="counter">
-        <strong>Tarefas criadas</strong> <span id="counter-created">0</span>
+      <div class="counters">
+        <div class="counter">
+          <strong>Tarefas</strong><div id="counter-tasks">0</div>
+        </div>
+        <div class="counter">
+          <div id="counter-done">0</div><strong>Concluídas</strong>
+        </div>
       </div>
-      <div class="counter">
-        <strong>Concluídas</strong> <span id="counter-done">0</span>
-      </div>
+      <div class="counter-border"></div>
     </section>
     <section class="tasks">
       <ul id="task-list">
         <li id="empty-list">Comece adicionando algo à lista</li>
+        <li class="task">
+          <label class="checkbox">
+            <input type="checkbox" class="check-area"/>
+            <span class="checkmark"></span>
+          </label>
+          <span class="task-text">This is a new task</span>
+        </li>
       </ul>
     </section>
   </main>
