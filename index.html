@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fazer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/global.css"/>
+  <link rel="stylesheet" href="./css/style.css"/>
+</head>
+<body>
+  <header>
+    <div class="title">
+      <h1 class="focus">Fazer</h1>
+      <strong class="focus">Transforme suas listas em conquistas: organize, priorize e realize!</strong>
+    </div>
+  </header>
+  <main>
+    <section class="input-field">
+      <input type="text" name="" id="task-adder"/>
+      <button id="add-task">Cadastrar</button>
+    </section>
+    <section class="task-count">
+      <div class="counter">
+        <strong>Tarefas criadas</strong> <span id="counter-created">0</span>
+      </div>
+      <div class="counter">
+        <strong>Concluídas</strong> <span id="counter-done">0</span>
+      </div>
+    </section>
+    <section class="tasks">
+      <ul id="task-list">
+        <li id="empty-list">Comece adicionando algo à lista</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="credit">
+    Victor Gnoato @ 2024
+  </footer>
+  <script src="./js/script.js"></script>
+</body>
+</html>

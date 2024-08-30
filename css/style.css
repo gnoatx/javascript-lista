@@ -1,0 +1,28 @@
+:root {
+    --bg-color: #fdfff3;
+    --highlight-color: #e1ff68;
+    --lowlight-color: ;
+    --secondary-color: ;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+header {
+    background-color: var(--highlight-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 250px;
+}
+
+h1.focus {
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+strong.focus {
+    font-weight: 300;
+    font-size: 1rem;
+}
