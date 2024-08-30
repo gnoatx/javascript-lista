@@ -1,8 +1,14 @@
 :root {
     --bg-color: #fdfff3;
     --highlight-color: #e1ff68;
-    --lowlight-color: ;
-    --secondary-color: ;
+    --lowlight-color: #536607;
+    --button-light: #cde66d;
+    --button-shadow: #404e04;
+    --highlight-complement: #CA69FF;
+    --lowlight-complement: #4D3D55;
+    --global-padding: 20px;
+    --global-radius: 100px;
+    --global-width: 768px;
 }
 
 body {
@@ -11,18 +17,118 @@ body {
 
 header {
     background-color: var(--highlight-color);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 250px;
+    align-items: center;
+
+    height: 220px;
+}
+
+.title {
+    width: 100%;
+    max-width: var(--global-width);
+
+    padding: 0 var(--global-padding);
+    margin-top: -20px;
 }
 
 h1.focus {
+    color: var(--lowlight-color);
     font-weight: 500;
     font-size: 3rem;
 }
 
 strong.focus {
+    color: var(--lowlight-color);
     font-weight: 300;
     font-size: 1rem;
+}
+
+#subtitle-break {
+    display: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    max-width: var(--global-width);
+
+    padding: 0 var(--global-padding);
+    margin: 0 auto;
+}
+
+.input-field {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    width: 100%;
+
+    margin-top: -28px;
+}
+
+#task-adder {
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    background-color: white;
+
+    width: 100%;
+
+    padding: 15px 25px;
+    border: 1px solid var(--highlight-color);
+    border-radius: var(--global-radius);
+}
+
+#add-task {
+    background-color: var(--lowlight-color);
+
+    flex: none;
+
+    padding: 15px 25px;
+    border-radius: var(--global-radius);
+
+    box-shadow: 0 4px 8px var(--button-shadow), 0 -4px 8px var(--button-light);
+}
+
+#add-task span {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .title {
+        margin-top: unset;
+    }
+
+    #subtitle-break {
+        display: block;
+    }
+
+    #add-task {
+        width: 56px;
+        height: 56px;
+
+        padding: unset;
+    }
+
+    #add-task span {
+        display: none;
+    }
+
+    #add-task:after {
+        font-size: 50px;
+        content: "+";
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 56px;
+    }
 }
